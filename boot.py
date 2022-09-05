@@ -8,7 +8,7 @@ from neopixel import NeoPixel
 from machine import Pin
 
 # How many pixels do we have?
-PIXEL_COUNT = 24
+PIXEL_COUNT = 300
 
 # How long should we keep the light on?
 LIGHT_MINUTES = 1
