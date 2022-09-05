@@ -7,6 +7,31 @@ import time
 from neopixel import NeoPixel
 from machine import Pin
 
+
+def top_to_bottom(strip, pixel_count, color):
+    """
+    This is a function to control the top of the stairs.
+    :param strip: The ws2812b strip
+    :param pixel_count: The number of pixels in the pixels strip
+    :param color: The color of the pixels strip
+    """
+    for i in range(pixel_count):
+        strip[i] = color
+        strip.write()
+
+
+def bottom_to_top(strip, pixel_count, color):
+    """
+    This is a function to control the bottom of the stairs.
+    :param strip: The ws2812b strip
+    :param pixel_count: The number of pixels in the pixels strip
+    :param color: The color of the pixels strip
+    """
+    for i in range(pixel_count - 1, 0, -1):
+        strip[i] = color
+        strip.write()
+
+
 # How many pixels do we have?
 PIXEL_COUNT = 300
 
@@ -41,18 +66,10 @@ pixels.write()
 while True:
     if dark.value():
         if down.value():
-            for i in range(PIXEL_COUNT):
-                pixels[i] = WHITE
-                pixels.write()
-                time.sleep(.5)
+            top_to_bottom(pixels, PIXEL_COUNT, WHITE)
             time.sleep(SHINE_TIME)
-            pixels.fill(OFF)
-            pixels.write()
+            top_to_bottom(pixels, PIXEL_COUNT, OFF)
         elif up.value():
-            for i in range(PIXEL_COUNT-1, 0, -1):
-                pixels[i] = WHITE
-                pixels.write()
-                time.sleep(.5)
+            bottom_to_top(pixels, PIXEL_COUNT, WHITE)
             time.sleep(SHINE_TIME)
-            pixels.fill(OFF)
-            pixels.write()
+            bottom_to_top(pixels, PIXEL_COUNT, OFF)
