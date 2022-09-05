@@ -36,7 +36,7 @@ def bottom_to_top(strip, pixel_count, color):
 PIXEL_COUNT = 300
 
 # How long should we keep the light on?
-LIGHT_MINUTES = 1
+LIGHT_MINUTES = 3
 
 # Which pin controls the light strip?
 PIXEL_PIN = Pin(0)
