@@ -44,6 +44,8 @@ PIXEL_PIN = Pin(0)
 # Which pin controls the motion detector?
 DOWN_MOTION_DETECTION_PIN = 1
 UP_MOTION_DETECTION_PIN = 2
+
+# Which pin controls the light sensor?
 DARKNESS_DETECTION_PIN = 3
 
 # Define the color we want to use for the light strip
