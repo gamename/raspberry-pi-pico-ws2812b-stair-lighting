@@ -6,6 +6,11 @@ This is the equivalent of the same configuration found [here](https://github.com
 # Wiring Diagram
 ![](.README_images/wiring-diagram.png)
 
+
+# Demo
+![](.README_images/stair-lights-demo.mp4)
+
+
 # Pictues
 
 ![](.README_images/pico-closeup.png)
