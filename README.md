@@ -8,7 +8,6 @@ This is the equivalent of the same configuration found [here](https://github.com
 
 
 # Demo
-![](.README_images/stair-lights-demo.mp4)
 
 
 # Pictues
